@@ -36,3 +36,7 @@ $hotels = [
     'distance_to_center' => 50
   ],
 ];
+
+echo "<pre>";
+var_dump($hotels);
+echo "</pre>";
