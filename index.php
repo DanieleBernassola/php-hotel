@@ -62,21 +62,21 @@ $hotels = [
   <table class="table">
     <thead>
       <tr>
-        <?php foreach ($hotels as $key => $hotelClass) : ?>
+        <?php foreach ($hotels[0] as $key => $hotelClass) : ?>
           <th><?php echo $key; ?></th>
         <?php endforeach; ?>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <?php foreach ($hotels as $key => $hotel) : ?>
+      <?php foreach ($hotels as $key => $hotel) : ?>
+        <tr>
           <td><?php echo $hotel['name']; ?></td>
           <td><?php echo $hotel['description']; ?></td>
           <td><?php echo $hotel['parking']; ?></td>
           <td><?php echo $hotel['vote']; ?></td>
           <td><?php echo $hotel['distance_to_center']; ?></td>
-        <?php endforeach; ?>
-      </tr>
+        </tr>
+      <?php endforeach; ?>
     </tbody>
   </table>
 </body>
