@@ -37,6 +37,31 @@ $hotels = [
   ],
 ];
 
-echo "<pre>";
-var_dump($hotels);
-echo "</pre>";
+// echo "<pre>";
+// var_dump($hotels);
+// echo "</pre>";
+
+foreach ($hotels as $hotelClass) {
+  echo "<hr>";
+  foreach ($hotelClass as $hotel) {
+    echo $hotel;
+    echo "<br>";
+  }
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PHP Hotel</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
