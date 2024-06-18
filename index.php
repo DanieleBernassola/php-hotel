@@ -37,17 +37,13 @@ $hotels = [
   ],
 ];
 
-// echo "<pre>";
-// var_dump($hotels);
-// echo "</pre>";
-
-foreach ($hotels as $hotelClass) {
-  echo "<hr>";
-  foreach ($hotelClass as $hotel) {
-    echo $hotel;
-    echo "<br>";
-  }
-}
+// foreach ($hotels as $hotelClass) {
+//   echo "<hr>";
+//   foreach ($hotelClass as $hotel) {
+//     echo $hotel;
+//     echo "<br>";
+//   }
+// }
 
 ?>
 
@@ -57,11 +53,28 @@ foreach ($hotels as $hotelClass) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <title>PHP Hotel</title>
 </head>
 
 <body>
-
+  <h1>LISTA HOTEL</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <?php foreach ($hotels as $key => $hotelClass) : ?>
+          <th><?php echo $key; ?></th>
+        <?php endforeach; ?>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <?php foreach ($hotels as $key => $hotel) : ?>
+          <td><?php echo $hotel; ?></td>
+        <?php endforeach; ?>
+      </tr>
+    </tbody>
+  </table>
 </body>
 
 </html>
